@@ -1,4 +1,4 @@
-# Angular Menu Test (Angular 19+)
+# Angular Menu Test
 
 Test task mini app built with **Angular (standalone)** and **TypeScript**.
 
@@ -12,12 +12,6 @@ Test task mini app built with **Angular (standalone)** and **TypeScript**.
   - number of selected items
   - total sum of selected values
 - Data is **static** (no backend)
-
-> Note: hash routing is used (`/#/menu`) to work correctly on GitHub Pages.
-
-## Live demo
-
-- GitHub Pages: **https://<YOUR_GITHUB_USERNAME>.github.io/<REPO_NAME>/**
 
 ## Tech stack
 

@@ -1,0 +1,61 @@
+<div class="page">
+  <header class="topbar">
+    <div class="left">
+      <a routerLink="/" class="back">← Home</a>
+      <div class="title">
+        <div class="h">Раздел: <b>{{ activeMenu()?.title }}</b></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="pill">
+        <div class="k">Выбрано пунктов</div>
+        <div class="v">{{ selectedCount() }}</div>
+      </div>
+      <div class="pill">
+        <div class="k">Общее значение</div>
+        <div class="v">{{ selectedTotal() }}</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sideTitle">Меню</div>
+
+      @for (m of menus; track m.id) {
+        <button
+          class="menuBtn"
+          [class.active]="m.id === activeMenuId()"
+          (click)="selectMenu(m.id)"
+        >
+          {{ m.title }}
+        </button>
+      }
+    </aside>
+
+    <main class="content">
+      <div class="contentTitle">Элементы</div>
+
+      <div class="grid">
+        @for (it of activeItems(); track it.id) {
+          <label class="item">
+            <input
+              type="checkbox"
+              [checked]="isChecked(it.id)"
+              (change)="toggleItem(it.id)"
+            />
+            <div class="meta">
+              <div class="name">{{ it.label }}</div>
+              <div class="value">Value: {{ it.value }}</div>
+            </div>
+          </label>
+        }
+      </div>
+
+      <div class="footerHint">
+        Подсчёты в шапке зависят только от текущего выбранного меню.
+      </div>
+    </main>
+  </div>
+</div>

@@ -1,3 +1,5 @@
+![Deploy](https://github.com/<username>/<repo>/actions/workflows/deploy.yml/badge.svg)
+
 # Angular Menu Test
 
 Test task mini app built with **Angular (standalone)** and **TypeScript**.
@@ -12,6 +14,13 @@ Test task mini app built with **Angular (standalone)** and **TypeScript**.
   - number of selected items
   - total sum of selected values
 - Data is **static** (no backend)
+
+## Extra features (beyond requirements)
+
+- **Unit tests (Vitest)**: component logic is covered with basic tests (selection count/total, menu switching behavior).
+- **Selection is preserved per menu tab**: switching between menu sections does not reset chosen checkboxes.
+- **Automatic deploy to GitHub Pages**: GitHub Actions workflow deploys the app on every push to `main`.
+
 
 ## Tech stack
 

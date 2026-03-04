@@ -1,4 +1,4 @@
-![Deploy](https://github.com/<username>/<repo>/actions/workflows/deploy.yml/badge.svg)
+![Deploy](https://github.com/nikitos212/angular-menu-test/actions/workflows/deploy.yml/badge.svg)
 
 # Angular Menu Test
 
